@@ -1,0 +1,31 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "packages/todo-app-backend/src",
+  "targets": {
+    "deploy": {
+      "executor": "@codebrew/nx-aws-cdk:deploy",
+      "options": {}
+    },
+    "destroy": {
+      "executor": "@codebrew/nx-aws-cdk:destroy",
+      "options": {}
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/todo-app-backend/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/todo-app-backend"],
+      "options": {
+        "jestConfig": "packages/todo-app-backend/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

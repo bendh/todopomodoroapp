@@ -1,5 +1,9 @@
 {
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
-  "projects": {}
+  "projects": {
+    "todo-app-backend": "packages/todo-app-backend",
+    "todo-app-e2e": "packages/todo-app-e2e",
+    "todo-app-fronend": "packages/todo-app-fronend"
+  }
 }

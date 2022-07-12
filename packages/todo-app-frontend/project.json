@@ -1,24 +1,24 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "packages/todo-app-fronend/src",
+  "sourceRoot": "packages/todo-app-frontend/src",
   "prefix": "todopomodoroapp",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/todo-app-fronend",
-        "index": "packages/todo-app-fronend/src/index.html",
-        "main": "packages/todo-app-fronend/src/main.ts",
-        "polyfills": "packages/todo-app-fronend/src/polyfills.ts",
-        "tsConfig": "packages/todo-app-fronend/tsconfig.app.json",
+        "outputPath": "dist/packages/todo-app-frontend",
+        "index": "packages/todo-app-frontend/src/index.html",
+        "main": "packages/todo-app-frontend/src/main.ts",
+        "polyfills": "packages/todo-app-frontend/src/polyfills.ts",
+        "tsConfig": "packages/todo-app-frontend/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "packages/todo-app-fronend/src/favicon.ico",
-          "packages/todo-app-fronend/src/assets"
+          "packages/todo-app-frontend/src/favicon.ico",
+          "packages/todo-app-frontend/src/assets"
         ],
-        "styles": ["packages/todo-app-fronend/src/styles.scss"],
+        "styles": ["packages/todo-app-frontend/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -37,8 +37,8 @@
           ],
           "fileReplacements": [
             {
-              "replace": "packages/todo-app-fronend/src/environments/environment.ts",
-              "with": "packages/todo-app-fronend/src/environments/environment.prod.ts"
+              "replace": "packages/todo-app-frontend/src/environments/environment.ts",
+              "with": "packages/todo-app-frontend/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"
@@ -58,10 +58,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "todo-app-fronend:build:production"
+          "browserTarget": "todo-app-frontend:build:production"
         },
         "development": {
-          "browserTarget": "todo-app-fronend:build:development"
+          "browserTarget": "todo-app-frontend:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -69,23 +69,23 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "todo-app-fronend:build"
+        "browserTarget": "todo-app-frontend:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "packages/todo-app-fronend/**/*.ts",
-          "packages/todo-app-fronend/**/*.html"
+          "packages/todo-app-frontend/**/*.ts",
+          "packages/todo-app-frontend/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/todo-app-fronend"],
+      "outputs": ["coverage/packages/todo-app-frontend"],
       "options": {
-        "jestConfig": "packages/todo-app-fronend/jest.config.ts",
+        "jestConfig": "packages/todo-app-frontend/jest.config.ts",
         "passWithNoTests": true
       }
     }

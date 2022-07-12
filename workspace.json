@@ -4,6 +4,6 @@
   "projects": {
     "todo-app-backend": "packages/todo-app-backend",
     "todo-app-e2e": "packages/todo-app-e2e",
-    "todo-app-fronend": "packages/todo-app-fronend"
+    "todo-app-frontend": "packages/todo-app-frontend"
   }
 }

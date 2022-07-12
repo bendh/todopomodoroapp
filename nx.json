@@ -43,5 +43,5 @@
       "style": "scss"
     }
   },
-  "defaultProject": "todo-app-fronend"
+  "defaultProject": "todo-app-frontend"
 }

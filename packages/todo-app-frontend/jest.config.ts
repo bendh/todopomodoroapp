@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'todo-app-fronend',
+  displayName: 'todo-app-frontend',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -9,7 +9,7 @@ export default {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../coverage/packages/todo-app-fronend',
+  coverageDirectory: '../../coverage/packages/todo-app-frontend',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },
